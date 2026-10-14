@@ -193,7 +193,10 @@ window.GLV = (function () {
   function dienThongTinChung(root) {
     $$("[data-bind]", root).forEach((el) => {
       const v = SITE[el.dataset.bind];
-      if (v) el.textContent = v;
+      if (!v) return;
+      // Chữ có xuống dòng (\n) thì hiện đúng từng dòng
+      if (String(v).includes("\n")) el.innerHTML = String(v).split("\n").map(esc).join("<br>");
+      else el.textContent = v;
     });
     $$("[data-link]", root).forEach((a) => {
       const href = LINKS[a.dataset.link];
