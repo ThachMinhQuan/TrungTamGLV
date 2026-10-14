@@ -12,6 +12,9 @@ google-apps-script/
 # Poster cũ không còn dùng (còn tên giáo viên đã nghỉ)
 assets/images/thong-bao/
 
+# Mã QR (tạo trên máy, không cần đưa lên)
+ma-qr/
+
 # File hệ thống
 Thumbs.db
 desktop.ini

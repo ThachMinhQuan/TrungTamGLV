@@ -1,0 +1,18 @@
+# Cấu hình cho hosting Netlify (https://trungtamglv.netlify.app)
+# Website tĩnh: không cần lệnh build, đăng thẳng thư mục gốc.
+
+[build]
+  publish = "."
+  command = ""
+
+# Ảnh, CSS, JS được trình duyệt lưu tạm 1 ngày cho trang tải nhanh
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
