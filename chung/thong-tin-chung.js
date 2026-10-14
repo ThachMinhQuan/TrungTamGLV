@@ -12,7 +12,7 @@ const SITE = {
   tenNgan: "Gió Lộc Vừng",
   tenBienHieu: "Cơ sở bổ trợ kiến thức Gió Lộc Vừng", // chữ lớn trên tấm biển đầu trang
   moTaNgan:
-    "Dạy thêm Toán – Văn – Anh lớp 6 đến 9 và Toán – Lý – Hóa lớp 10, 11, 12. Thầy cô là Thạc sĩ, cán bộ quản lý và giáo viên các trường THPT trực tiếp đứng lớp.",
+    "Bổ trợ kiến thức Toán – Văn – Anh lớp 6 đến 9 và Toán – Lý – Hóa lớp 10, 11, 12. Thầy cô là Thạc sĩ, cán bộ quản lý và giáo viên các trường THPT trực tiếp đứng lớp.",
   viTriNoiBat: "Ngay cạnh Trường THPT Lý Tự Trọng",
 
   // Thông tin pháp lý (hiện ở chân trang)
