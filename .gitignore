@@ -1,0 +1,23 @@
+# Chỉ đưa lên GitHub những file website thực sự dùng.
+# Các file dưới đây giữ lại trên máy, KHÔNG công khai.
+
+# Ảnh gốc chủ trung tâm gửi (có ảnh chụp màn hình, poster cũ)
+img/
+
+# Tài liệu nội bộ, mã nhận form (có mã thư mục Google Drive chứa danh sách đăng ký)
+CLAUDE.md
+HUONG-DAN-FORM.md
+google-apps-script/
+
+# Bản cũ trước khi chia phần, cấu hình công cụ
+_ban-cu/
+.claude/
+
+# Poster cũ không còn dùng (còn tên giáo viên đã nghỉ)
+assets/images/thong-bao/
+
+# File hệ thống
+Thumbs.db
+desktop.ini
+.DS_Store
+_tmp*

@@ -1,0 +1,35 @@
+/* =====================================================================
+   PHẦN LIÊN HỆ – giao diện
+   Dải thuê phòng, thông tin liên hệ, bản đồ.
+   ===================================================================== */
+
+/* ---------- Thuê phòng ---------- */
+.rent { background: var(--do); color: #fff; padding: 44px 0; }
+.rent__inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.rent h2 { font-family: var(--font-sign); font-weight: 700; font-size: 34px; color: var(--vang); margin-bottom: 6px; }
+.rent p { margin: 0; max-width: 60ch; }
+.rent__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ---------- Liên hệ ---------- */
+.contact { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; }
+.contact .section-head { margin-bottom: 0; }
+.contact__list { margin-top: 28px; }
+.contact__list div { padding: 16px 0; border-top: 1px solid var(--ke); }
+.contact__list dt { font-size: 14px; color: var(--xam); }
+.contact__list dd { font-size: 17px; font-weight: 500; }
+.contact__list dd a { color: var(--do); }
+.contact__phone { display: block; margin: 2px 0; }
+.contact__list small { display: block; color: var(--xam); font-weight: 400; font-size: 15px; }
+.contact__map { border-radius: 6px; overflow: hidden; min-height: 440px; background: var(--nen-2); }
+.contact__map iframe { width: 100%; height: 100%; min-height: 440px; border: 0; display: block; }
+.rent :focus-visible { outline-color: var(--vang); }
+
+@media (max-width: 1000px) {
+  .contact { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 640px) {
+  .rent h2 { font-size: 28px; }
+  .rent__actions .btn { flex: 1; }
+  .contact__map, .contact__map iframe { min-height: 320px; }
+}

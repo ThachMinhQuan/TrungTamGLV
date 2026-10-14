@@ -1,0 +1,123 @@
+/* =====================================================================
+   PHẦN TUYỂN SINH – giao diện
+   Bảng xanh lớp học, form đăng ký, câu hỏi thường gặp.
+   ===================================================================== */
+
+/* ---------- Tuyển sinh: bảng xanh ---------- */
+.board {
+  color: var(--phan);
+  background: radial-gradient(ellipse at 20% 15%, rgba(255, 255, 255, 0.06), transparent 55%), radial-gradient(ellipse at 85% 80%, rgba(255, 255, 255, 0.04), transparent 50%), var(--xanh);
+  border-top: 12px solid var(--go); border-bottom: 12px solid var(--go);
+}
+.board .section-title { color: var(--phan); }
+.board .section-sub { color: rgba(241, 239, 230, 0.75); }
+.board__facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 40px; margin-bottom: 48px; }
+.board__facts div { padding: 16px 0; border-top: 1px solid rgba(241, 239, 230, 0.2); }
+.board__facts dt { font-size: 14px; color: rgba(241, 239, 230, 0.65); }
+.board__facts dd { font-family: var(--font-sign); font-weight: 600; font-size: 24px; line-height: 1.2; }
+.board__facts .is-key dd { color: var(--vang); }
+
+.schedule { overflow-x: auto; }
+.schedule table { width: 100%; border-collapse: collapse; min-width: 760px; }
+.schedule th { text-align: left; font-weight: 500; font-size: 14px; color: rgba(241, 239, 230, 0.65); padding: 0 14px 12px 0; border-bottom: 1px solid rgba(241, 239, 230, 0.4); }
+.schedule td { padding: 14px 14px 14px 0; border-bottom: 1px dashed rgba(241, 239, 230, 0.2); vertical-align: baseline; }
+.schedule__class { font-family: var(--font-sign); font-weight: 700; font-size: 24px; white-space: nowrap; }
+.schedule__teacher { color: var(--vang); text-decoration: none; font-weight: 500; }
+.schedule__teacher:hover { text-decoration: underline; text-underline-offset: 3px; }
+.schedule__none { color: rgba(241, 239, 230, 0.6); }
+.schedule__times { display: grid; gap: 2px; }
+.schedule__times b { display: inline-block; min-width: 84px; font-weight: 500; color: rgba(241, 239, 230, 0.7); }
+.status--dang-tuyen { color: var(--vang); font-weight: 500; }
+.status--sap-mo, .status--sap-khai-giang, .status--da-du { color: rgba(241, 239, 230, 0.6); }
+
+.notices { margin-top: 64px; }
+.notices__title { font-family: var(--font-sign); font-weight: 700; font-size: 28px; margin-bottom: 24px; }
+.notices__grid { display: flex; flex-wrap: wrap; gap: 32px; }
+.notice { display: block; width: min(320px, 100%); text-decoration: none; }
+.notice:nth-child(odd) { transform: rotate(-1.2deg); }
+.notice:nth-child(even) { transform: rotate(1deg); }
+.notice img { width: 100%; height: auto; border: 6px solid #fff; box-shadow: 0 14px 24px -12px rgba(0, 0, 0, 0.55); }
+.notice span { display: block; margin-top: 12px; font-size: 14px; color: rgba(241, 239, 230, 0.8); }
+.board :focus-visible { outline-color: var(--vang); }
+
+/* ---------- Đăng ký ---------- */
+.register { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: start; }
+.register__quick .section-head { margin-bottom: 28px; }
+.phones { display: grid; gap: 4px; margin-bottom: 24px; }
+.phones li { padding: 14px 0; border-top: 1px solid var(--ke); }
+.phones small { display: block; color: var(--xam); font-size: 14px; }
+.phones .phones__so { font-family: var(--font-sign); font-weight: 700; font-size: 44px; line-height: 1.05; color: var(--do); text-decoration: none; }
+.phones .phones__so:hover { color: var(--do-dam); }\n.phones .zalo-chip { min-height: 32px; font-size: 14px; position: relative; top: -6px; }
+.register__apps { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.form { border: 1px solid var(--ke); border-radius: 8px; padding: 32px; background: #fff; }
+.form__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 22px; }
+.field { display: flex; flex-direction: column; gap: 6px; margin: 0; padding: 0; border: 0; min-width: 0; }
+.field--full { grid-column: 1 / -1; }
+.field label, .field legend { font-weight: 500; font-size: 15px; padding: 0; }
+.field legend { margin-bottom: 8px; }
+.req { color: var(--do); }
+.field input[type="text"], .field input[type="tel"], .field input[type="email"], .field select, .field textarea {
+  width: 100%; font: inherit; font-size: 16px; color: var(--muc); padding: 11px 13px;
+  border-radius: 4px; border: 1.5px solid #cfccc4; background: #fff;
+}
+.field textarea { resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--xanh); box-shadow: 0 0 0 3px rgba(30, 70, 54, 0.15); }
+.field.has-error input, .field.has-error select { border-color: var(--do); }
+.field__error { color: var(--do); font-size: 14px; }
+.field__error:empty { display: none; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { position: relative; cursor: pointer; }
+.chip input { position: absolute; opacity: 0; pointer-events: none; }
+.chip span { display: inline-flex; align-items: center; min-height: 40px; padding: 7px 14px; border-radius: 4px; border: 1.5px solid #cfccc4; font-size: 15px; user-select: none; }
+.chip:hover span { border-color: var(--muc); }
+.chip input:checked + span { background: var(--xanh); border-color: var(--xanh); color: var(--phan); }
+.chip input:focus-visible + span { outline: 3px solid var(--xanh); outline-offset: 2px; }
+.consent { display: flex; gap: 10px; align-items: flex-start; font-weight: 400 !important; cursor: pointer; }
+.consent input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--xanh); flex-shrink: 0; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form__status { margin-top: 16px; }
+.form__status:empty { display: none; }
+.alert { display: grid; grid-template-columns: 22px 1fr; gap: 10px; padding: 14px 16px; border-radius: 4px; }
+.alert .icon { margin-top: 3px; }
+.alert--ok { background: #e6f2ea; color: #17462e; }
+.alert--err { background: #fbe9ea; color: #7d1419; }
+.alert a { font-weight: 600; }
+
+/* ---------- Hỏi đáp ---------- */
+.faq-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items: start; }
+.faq__item { border-top: 1px solid #d5d8d3; }
+.faq__item:last-child { border-bottom: 1px solid #d5d8d3; }
+.faq__q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; border: 0; background: none; text-align: left; font-weight: 600; font-size: 17px; }
+.faq__q .icon { transition: transform 0.2s; flex-shrink: 0; }
+.faq__item.is-open .faq__q .icon { transform: rotate(180deg); }
+.faq__a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.25s; }
+.faq__item.is-open .faq__a { grid-template-rows: 1fr; }
+.faq__a > div { overflow: hidden; }
+.faq__a p { margin: 0; padding: 0 0 20px; color: var(--xam); max-width: 64ch; }
+
+@media (max-width: 1000px) {
+  .register, .faq-layout { grid-template-columns: 1fr; gap: 40px; }
+  .board__facts { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .schedule__times b { min-width: 76px; }
+
+  .board__facts { grid-template-columns: 1fr; margin-bottom: 36px; }
+  .board__facts div { padding: 12px 0; }
+  .schedule { overflow: visible; }
+  .schedule table { min-width: 0; }
+  .schedule thead { display: none; }
+  .schedule table, .schedule tbody, .schedule tr, .schedule td { display: block; }
+  .schedule tr { padding: 14px 0; border-bottom: 1px dashed rgba(241, 239, 230, 0.25); }
+  .schedule td { border: 0; padding: 2px 0; display: flex; gap: 12px; }
+  .schedule td::before { content: attr(data-label); min-width: 84px; color: rgba(241, 239, 230, 0.6); font-size: 14px; }
+  .schedule td:first-child::before { display: none; }
+  .notices__grid { gap: 24px; }
+  .notice { width: calc(50% - 12px); }
+
+  .phones .phones__so { font-size: 38px; }
+  .form { padding: 20px; }
+  .form__grid { grid-template-columns: 1fr; }
+}

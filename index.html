@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cơ sở bổ trợ kiến thức Gió Lộc Vừng – Dạy thêm THCS, THPT tại Nam Ninh, Ninh Bình</title>
+  <meta name="description" content="Cơ sở bổ trợ kiến thức Gió Lộc Vừng – dạy thêm THCS, THPT: Toán, Văn, Anh lớp 6–9; Toán, Lý, Hóa lớp 10–12. Thầy cô Thạc sĩ trực tiếp đứng lớp. Cạnh Trường THPT Lý Tự Trọng, Thôn Nội, Nam Ninh, Ninh Bình. ĐT/Zalo: 0917 760 498." />
+  <meta name="theme-color" content="#C8232B" />
+
+  <!-- Chia sẻ Facebook / Zalo -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cơ sở bổ trợ kiến thức Gió Lộc Vừng – Tuyển sinh THCS, THPT" />
+  <meta property="og:description" content="Toán, Văn, Anh lớp 6–9. Toán, Lý, Hóa lớp 10–12. Thầy cô Thạc sĩ đứng lớp. Học phí 45.000đ/buổi." />
+  <meta property="og:image" content="assets/images/co-so/phong-hoc-3.jpg" />
+  <meta property="og:locale" content="vi_VN" />
+
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700;800&family=Lexend:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Giao diện chung -->
+  <link rel="stylesheet" href="chung/nen-tang.css" />
+  <link rel="stylesheet" href="chung/khung-trang.css" />
+  <!-- Giao diện từng phần -->
+  <link rel="stylesheet" href="cac-phan/gioi-thieu/giao-dien.css" />
+  <link rel="stylesheet" href="cac-phan/mon-hoc/giao-dien.css" />
+  <link rel="stylesheet" href="cac-phan/giao-vien/giao-dien.css" />
+  <link rel="stylesheet" href="cac-phan/co-so-vat-chat/giao-dien.css" />
+  <link rel="stylesheet" href="cac-phan/tuyen-sinh/giao-dien.css" />
+  <link rel="stylesheet" href="cac-phan/lien-he/giao-dien.css" />
+</head>
+<body>
+  <a class="skip-link" href="#noi-dung">Bỏ qua menu</a>
+
+  <!--
+    Thứ tự các phần trên trang. Mỗi phần nằm trong thư mục cac-phan/<tên phần>/
+    Muốn đổi thứ tự: đổi chỗ các dòng <div data-phan="...">.
+    Muốn tạm ẩn một phần: xóa dòng <div data-phan="..."> của phần đó.
+  -->
+  <div data-phan="dau-trang"></div>
+
+  <main id="noi-dung">
+    <div data-phan="tam-bien"></div>
+    <div data-phan="gioi-thieu"></div>
+    <div data-phan="mon-hoc"></div>
+    <div data-phan="giao-vien"></div>
+    <div data-phan="co-so-vat-chat"></div>
+    <div data-phan="tuyen-sinh"></div>
+    <div data-phan="lien-he"></div>
+  </main>
+
+  <div data-phan="chan-trang"></div>
+  <div data-phan="nut-noi"></div>
+
+  <!-- 1. Dữ liệu (nội dung) -->
+  <script src="chung/thong-tin-chung.js"></script>
+  <script src="cac-phan/gioi-thieu/du-lieu.js"></script>
+  <script src="cac-phan/mon-hoc/du-lieu.js"></script>
+  <script src="cac-phan/giao-vien/du-lieu.js"></script>
+  <script src="cac-phan/co-so-vat-chat/du-lieu.js"></script>
+  <script src="cac-phan/tuyen-sinh/du-lieu.js"></script>
+  <script src="cac-phan/lien-he/du-lieu.js"></script>
+
+  <!-- 2. Công cụ chung + khung trang (đầu trang, tấm biển, chân trang) -->
+  <script src="chung/cong-cu.js"></script>
+  <script src="chung/khung-trang.js"></script>
+
+  <!-- 3. Cách hiển thị từng phần -->
+  <script src="cac-phan/gioi-thieu/hien-thi.js"></script>
+  <script src="cac-phan/mon-hoc/hien-thi.js"></script>
+  <script src="cac-phan/giao-vien/hien-thi.js"></script>
+  <script src="cac-phan/co-so-vat-chat/hien-thi.js"></script>
+  <script src="cac-phan/tuyen-sinh/hien-thi.js"></script>
+  <script src="cac-phan/lien-he/hien-thi.js"></script>
+
+  <!-- 4. Khởi động (luôn để cuối cùng) -->
+  <script src="chung/khoi-dong.js"></script>
+</body>
+</html>

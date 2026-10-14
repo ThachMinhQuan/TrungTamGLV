@@ -1,0 +1,37 @@
+/* =====================================================================
+   PHẦN GIỚI THIỆU – giao diện
+   Màu sắc dùng biến trong chung/nen-tang.css (var(--do), var(--xanh)...).
+   ===================================================================== */
+
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.about__photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
+.reasons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 40px; margin-top: 56px; }
+.reasons li { display: grid; grid-template-columns: 28px 1fr; gap: 4px 14px; padding: 20px 0; border-top: 1px solid var(--ke); }
+.reasons .icon { width: 24px; height: 24px; color: var(--do); grid-row: span 2; margin-top: 2px; }
+.reasons strong { font-weight: 600; font-size: 17px; }
+.reasons span { color: var(--xam); font-size: 15px; }
+.about__photo figcaption { font-size: 14px; color: var(--xam); margin-top: 10px; }
+
+/* Cảm nhận (chỉ hiện khi bật trong du-lieu.js) */
+.slider { position: relative; }
+.slider__track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 64px) / 3); gap: 32px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.slider__track::-webkit-scrollbar { display: none; }
+.testimonial { scroll-snap-align: start; border-top: 2px solid var(--muc); padding-top: 18px; }
+.testimonial__text { margin: 0 0 14px; font-size: 17px; }
+.testimonial__who strong { display: block; }
+.testimonial__who small { color: var(--xam); }
+.slider__btn { position: absolute; top: -64px; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--ke); background: #fff; }
+.slider__btn--prev { right: 52px; }
+.slider__btn--next { right: 0; }
+
+@media (max-width: 1000px) {
+  .about { grid-template-columns: 1fr; gap: 40px; }
+  .reasons { grid-template-columns: repeat(2, 1fr); }
+  .slider__track { grid-auto-columns: calc((100% - 32px) / 2); }
+}
+
+@media (max-width: 640px) {
+  .reasons { grid-template-columns: 1fr; margin-top: 40px; }
+  .slider__track { grid-auto-columns: 86%; }
+  .slider__btn { display: none; }
+}
