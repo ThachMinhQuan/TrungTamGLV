@@ -19,7 +19,7 @@ const PHAN_TUYEN_SINH = {
 /* ---------- Thông tin khóa học (dải thông tin trên bảng xanh) ---------- */
 // Thông tin chung về khóa học (theo bảng công khai tuyển sinh)
 const THONG_TIN_KHOA_HOC = [
-  { icon: "book", tieuDe: "Môn & khối lớp", noiDung: "THCS: Toán, Văn, Anh, Hóa 9. THPT: Toán, Lý, Hóa lớp 10, 11, 12" },
+  { icon: "book", tieuDe: "Môn & khối lớp", noiDung: "THCS: Toán, Văn, Anh. THPT: Toán, Lý, Hóa lớp 10, 11, 12" },
   { icon: "clock", tieuDe: "Thời lượng", noiDung: "1 giờ 45 phút – 2 giờ / ca học" },
   { icon: "users", tieuDe: "Sĩ số", noiDung: "Tối đa 30 học sinh / lớp" },
   { icon: "building", tieuDe: "Hình thức", noiDung: "Học trực tiếp tại cơ sở" },
@@ -28,10 +28,9 @@ const THONG_TIN_KHOA_HOC = [
 
 /* ---------- Lớp đang tuyển sinh (thời khóa biểu) ---------- */
 // Theo thời khóa biểu tại cơ sở (ảnh: assets/images/thong-bao/thoi-khoa-bieu.jpg – chỉ lưu trên máy).
-// giaoVien: id thầy cô có trang giới thiệu, hoặc ghi tên (vd "Cô Thùy Anh"), hoặc "" nếu đang xếp giáo viên.
+// giaoVien: id thầy cô có trang giới thiệu, hoặc ghi tên (vd "Cô Nguyễn Thị A"), hoặc "" nếu đang xếp giáo viên.
 // buoi: các buổi học trong tuần.  trangThai: "dang-tuyen" | "sap-khai-giang" | "da-du"
 const LOP_HOC = [
-  { ten: "Hóa Học 9", mon: "hoa", cap: "thcs", giaoVien: "Cô Thùy Anh", buoi: [{ thu: "Thứ 5", gio: "17h00 – 19h00" }, { thu: "Thứ 7", gio: "7h10 – 9h10" }], siSo: 30, trangThai: "dang-tuyen" },
   { ten: "Toán Học 10", mon: "toan", cap: "thpt", giaoVien: "tran-duc-thien", buoi: [{ thu: "Thứ 4", gio: "17h30 – 19h30" }, { thu: "Thứ 7", gio: "14h15 – 16h15" }], siSo: 30, trangThai: "dang-tuyen" },
   { ten: "Toán Học 11", mon: "toan", cap: "thpt", giaoVien: "tran-duc-thien", buoi: [{ thu: "Thứ 3", gio: "17h30 – 19h30" }, { thu: "Thứ 7", gio: "17h30 – 19h30" }], siSo: 30, trangThai: "dang-tuyen" },
   { ten: "Toán Học 12", mon: "toan", cap: "thpt", giaoVien: "tran-duc-thien", buoi: [{ thu: "Thứ 5", gio: "17h30 – 19h30" }, { thu: "Chủ nhật", gio: "17h30 – 19h30" }], siSo: 30, trangThai: "dang-tuyen" },
@@ -50,7 +49,7 @@ const THONG_BAO = [];
 
 /* ---------- Câu hỏi thường gặp ---------- */
 const FAQ = [
-  { hoi: "Cơ sở dạy những môn và khối lớp nào?", dap: "Toán, Ngữ Văn, Tiếng Anh cho học sinh lớp 6 đến 9, Hóa Học lớp 9, và Toán, Vật Lý, Hóa Học cho học sinh lớp 10, 11, 12. Xem thời khóa biểu ở mục Tuyển sinh." },
+  { hoi: "Cơ sở dạy những môn và khối lớp nào?", dap: "Toán, Ngữ Văn, Tiếng Anh cho học sinh lớp 6 đến 9 và Toán, Vật Lý, Hóa Học cho học sinh lớp 10, 11, 12. Xem thời khóa biểu ở mục Tuyển sinh." },
   { hoi: "Học phí bao nhiêu?", dap: "Vui lòng gọi hoặc nhắn Zalo số 0917 760 498 để được tư vấn học phí từng lớp. Mỗi ca học từ 1 giờ 45 phút đến 2 giờ." },
   { hoi: "Mỗi lớp có bao nhiêu học sinh?", dap: "Mỗi lớp tối đa 30 học sinh." },
   { hoi: "Ai là người trực tiếp giảng dạy?", dap: "Các thầy cô trực tiếp đứng lớp – đều là Thạc sĩ, Phó Hiệu trưởng và giáo viên các trường THPT Lý Tự Trọng, THPT Trần Văn Bảo. Xem chi tiết tại mục Giáo viên." },

@@ -30,7 +30,6 @@ const CAP_HOC = [
       { key: "toan", trangThai: "dang-tuyen" },
       { key: "van", trangThai: "dang-tuyen" },
       { key: "anh", trangThai: "dang-tuyen" },
-      { key: "hoa", trangThai: "dang-tuyen" },
     ],
   },
   {

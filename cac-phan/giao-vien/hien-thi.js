@@ -9,7 +9,8 @@
   "use strict";
   const { $, $$, esc, clean, icon, tieuDe, monInfo, capInfo, teacherById, classesOf, sessionsText, xungHo, duLieu, LINKS, ganLienKet } = GLV;
 
-  const filterState = { cap: "all", mon: "all" };
+  // loc: "all" | "cap:thpt" | "truong:THPT Lý Tự Trọng" (nhóm nút thứ nhất) · mon: key môn
+  const filterState = { loc: "all", mon: "all" };
   let lastFocus = null;
   let currentTeacherId = null;
 
@@ -28,11 +29,15 @@
 
   /* ---------------- Danh sách thầy cô ---------------- */
   function renderTeachers() {
-    $$("#levelFilter .tab").forEach((b) => b.classList.toggle("is-active", b.dataset.cap === filterState.cap));
+    $$("#levelFilter .tab").forEach((b) => b.classList.toggle("is-active", b.dataset.loc === filterState.loc));
     $$("#teacherFilter .tab").forEach((b) => b.classList.toggle("is-active", b.dataset.mon === filterState.mon));
 
     const list = GIAO_VIEN.filter(
-      (t) => (filterState.cap === "all" || t.cap.includes(filterState.cap)) && (filterState.mon === "all" || t.mon.includes(filterState.mon))
+      (t) => {
+        const [kieu, giaTri] = filterState.loc.split(/:(.*)/s);
+        const hopLoc = filterState.loc === "all" || (kieu === "cap" ? t.cap.includes(giaTri) : t.truong === giaTri);
+        return hopLoc && (filterState.mon === "all" || t.mon.includes(filterState.mon));
+      }
     );
     $("#teacherEmpty").hidden = list.length > 0;
     $("#teacherGrid").innerHTML = list
@@ -125,16 +130,20 @@
     menu: "Giáo viên",
 
     html() {
-      const caps = [{ key: "all", label: "Tất cả" }].concat(
-        duLieu.CAP_HOC.filter((c) => GIAO_VIEN.some((g) => g.cap.includes(c.key))).map((c) => ({ key: c.key, label: c.vietTat }))
-      );
+      // Nhóm nút thứ nhất: Tất cả + cấp học (chỉ khi có từ 2 cấp) + trường công tác của thầy cô
+      const capCoGV = duLieu.CAP_HOC.filter((c) => GIAO_VIEN.some((g) => g.cap.includes(c.key)));
+      const demGV = (tr) => GIAO_VIEN.filter((g) => g.truong === tr).length;
+      const truongs = [...new Set(GIAO_VIEN.map((g) => g.truong).filter(Boolean))].sort((a, b) => demGV(b) - demGV(a)); // trường nhiều thầy cô đứng trước
+      const caps = [{ key: "all", label: "Tất cả" }]
+        .concat(capCoGV.length > 1 ? capCoGV.map((c) => ({ key: "cap:" + c.key, label: c.vietTat })) : [])
+        .concat(truongs.map((tr) => ({ key: "truong:" + tr, label: tr })));
       // Chỉ hiện các môn đã có giáo viên
       const mons = [{ key: "all", label: "Mọi môn" }].concat(
         Object.keys(duLieu.MON_HOC).filter((k) => GIAO_VIEN.some((g) => g.mon.includes(k))).map((k) => ({ key: k, label: monInfo(k).ten }))
       );
       const boLoc = `
         <div class="tabs" role="group" aria-label="Lọc giáo viên">
-          <div class="tabs__group" id="levelFilter">${caps.map((c) => `<button type="button" class="tab" data-cap="${c.key}">${esc(c.label)}</button>`).join("")}</div>
+          <div class="tabs__group" id="levelFilter">${caps.map((c) => `<button type="button" class="tab" data-loc="${esc(c.key)}">${esc(c.label)}</button>`).join("")}</div>
           <div class="tabs__group" id="teacherFilter">${mons.map((m) => `<button type="button" class="tab" data-mon="${m.key}">${esc(m.label)}</button>`).join("")}</div>
         </div>`;
 
@@ -143,7 +152,7 @@
           <div class="container">
             ${tieuDe(PHAN_GIAO_VIEN.tieuDe, PHAN_GIAO_VIEN.moTa, boLoc)}
             <div class="teachers" id="teacherGrid"></div>
-            <p class="empty" id="teacherEmpty" hidden>Môn này đang xếp giáo viên. <a href="#dang-ky">Để lại số điện thoại</a> để được báo khi mở lớp.</p>
+            <p class="empty" id="teacherEmpty" hidden>Chưa có thầy cô phù hợp bộ lọc này. <a href="#dang-ky">Để lại số điện thoại</a> để được báo khi mở lớp.</p>
           </div>
         </section>
 
@@ -158,9 +167,9 @@
 
     chay() {
       $("#levelFilter").addEventListener("click", (e) => {
-        const b = e.target.closest("[data-cap]");
+        const b = e.target.closest("[data-loc]");
         if (!b) return;
-        filterState.cap = b.dataset.cap;
+        filterState.loc = b.dataset.loc;
         renderTeachers();
       });
       $("#teacherFilter").addEventListener("click", (e) => {

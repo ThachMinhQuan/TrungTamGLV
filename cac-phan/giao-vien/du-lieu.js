@@ -7,7 +7,7 @@
 
 const PHAN_GIAO_VIEN = {
   tieuDe: "Thầy cô đứng lớp",
-  moTa: "Thạc sĩ, cán bộ quản lý và giáo viên các trường THPT Lý Tự Trọng, Trần Văn Bảo.",
+  moTa: "Thạc sĩ, cán bộ quản lý và giáo viên các trường THPT Lý Tự Trọng và THPT Trần Văn Bảo.",
 };
 
 // id: dùng làm link riêng của thầy cô, vd: index.html#gv-tran-duc-thien (có thể gửi link này lên Facebook/Zalo)
@@ -23,6 +23,7 @@ const GIAO_VIEN = [
     cap: ["thpt"],
     hocVi: "Thạc sĩ Toán học",
     chucVu: "Phó Hiệu trưởng Trường THPT Trần Văn Bảo",
+    truong: "THPT Trần Văn Bảo", // dùng cho bộ lọc theo trường
     lopDay: ["Toán Học 10", "Toán Học 11", "Toán Học 12"],
     gioiThieu:
       "Thầy Trần Đức Thiện là Thạc sĩ Toán học, hiện là Phó Hiệu trưởng Trường THPT Trần Văn Bảo. Thầy trực tiếp đứng lớp Toán 10, 11, 12 tại cơ sở. Hãy cùng thầy chinh phục môn Toán một cách đơn giản và hiệu quả.",
@@ -45,6 +46,7 @@ const GIAO_VIEN = [
     cap: ["thpt"],
     hocVi: "Thạc sĩ Vật lý",
     chucVu: "Phó Hiệu trưởng Trường THPT Lý Tự Trọng",
+    truong: "THPT Lý Tự Trọng", // dùng cho bộ lọc theo trường
     lopDay: ["Vật Lý 10", "Vật Lý 11", "Vật Lý 12"],
     gioiThieu:
       "Thầy Phan Duy Hiền là Thạc sĩ Vật lý, hiện là Phó Hiệu trưởng Trường THPT Lý Tự Trọng. Thầy trực tiếp đứng lớp Vật Lý 10, 11, 12 tại cơ sở. [CẦN XÁC NHẬN – bổ sung lời giới thiệu của thầy]",
@@ -64,6 +66,7 @@ const GIAO_VIEN = [
     cap: ["thpt"],
     hocVi: "Thạc sĩ Hóa học",
     chucVu: "Giáo viên Trường THPT Lý Tự Trọng",
+    truong: "THPT Lý Tự Trọng", // dùng cho bộ lọc theo trường
     lopDay: ["Hóa Học 10", "Hóa Học 11", "Hóa Học 12"],
     gioiThieu:
       "Thầy Đặng Xuân Minh là Thạc sĩ Hóa học, giáo viên Trường THPT Lý Tự Trọng. Thầy trực tiếp đứng lớp Hóa 10, 11, 12 tại cơ sở. [CẦN XÁC NHẬN – bổ sung lời giới thiệu của thầy]",
@@ -83,6 +86,7 @@ const GIAO_VIEN = [
     cap: ["thpt"],
     hocVi: "Thạc sĩ Toán học",
     chucVu: "Giáo viên Trường THPT Lý Tự Trọng",
+    truong: "THPT Lý Tự Trọng", // dùng cho bộ lọc theo trường
     lopDay: ["Toán Học 10", "Toán Học 11", "Toán Học 12"],
     gioiThieu:
       "Cô Nguyễn Thị Thu Hường là Thạc sĩ Toán học, giáo viên Trường THPT Lý Tự Trọng. Cô trực tiếp đứng lớp Toán 10, 11, 12 tại cơ sở. [CẦN XÁC NHẬN – bổ sung lời giới thiệu của cô]",
