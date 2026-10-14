@@ -28,7 +28,7 @@ const THONG_TIN_KHOA_HOC = [
 ];
 
 /* ---------- Lớp đang tuyển sinh (thời khóa biểu) ---------- */
-// Theo thời khóa biểu tại cơ sở (img/Thoi_Khoa_Bieu_Lich_day.jpg).
+// Theo thời khóa biểu tại cơ sở (ảnh: assets/images/thong-bao/thoi-khoa-bieu.jpg – chỉ lưu trên máy).
 // giaoVien: id thầy cô có trang giới thiệu, hoặc ghi tên (vd "Cô Đào"), hoặc "" nếu đang xếp giáo viên.
 // buoi: các buổi học trong tuần.  trangThai: "dang-tuyen" | "sap-khai-giang" | "da-du"
 const LOP_HOC = [

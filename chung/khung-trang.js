@@ -82,7 +82,7 @@
               </div>`;
 
   /* ---------------- Banner vẽ bằng vector (SVG) ----------------
-     Nét căng ở mọi độ phân giải. Bố cục theo ảnh gốc img/Banner.jpg (1280 x 502):
+     Nét căng ở mọi độ phân giải. Bố cục theo ảnh banner gốc (assets/images/hero/banner.jpg, 1280 x 502):
      mỗi đoạn chữ đặt đúng vị trí và độ rộng đo từ ảnh gốc (textLength),
      nên nếu sửa chữ dài hơn nhiều thì chữ sẽ bị ép hẹp lại. */
   function veBannerVector(o) {
