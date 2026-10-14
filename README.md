@@ -3,7 +3,7 @@
 Website giới thiệu và tuyển sinh của **Cơ sở bổ trợ kiến thức Gió Lộc Vừng** – dạy thêm THCS, THPT
 tại Thôn Nội, Nam Ninh, Ninh Bình (cạnh Trường THPT Lý Tự Trọng).
 
-**Xem website:** https://thachminhquan.github.io/TrungTamGLV/
+**Xem website:** https://trungtamglv.netlify.app/
 
 ĐT/Zalo: 0917 760 498 – 0912 807 498
 
