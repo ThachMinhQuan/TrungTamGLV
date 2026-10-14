@@ -9,7 +9,7 @@ const GIOI_THIEU = {
     "Gió Lộc Vừng là cơ sở bổ trợ kiến thức cho học sinh THCS và THPT tại Thôn Nội, Nam Ninh, Ninh Bình – ngay cạnh Trường THPT Lý Tự Trọng, thuận tiện cho học sinh đi lại.",
     "Cơ sở đầu tư hệ thống phòng học rộng rãi, có điều hòa, quạt trần, bảng chống lóa, bàn ghế mới và sân chờ rộng có mái che. Các thầy cô – đều là Thạc sĩ, cán bộ quản lý và giáo viên các trường THPT – trực tiếp đến giảng dạy, giúp học sinh được học đúng người, đúng chương trình.",
   ],
-  anh: { anh: "assets/images/co-so/cong-truoc.jpg", chuThich: "Cổng vào Cơ sở bổ trợ kiến thức Gió Lộc Vừng" },
+  anh: { anh: "assets/images/co-so/cong-vao.jpg", chuThich: "Cổng vào Cơ sở bổ trợ kiến thức Gió Lộc Vừng" },
 
   // Mục "Cảm nhận" – chỉ bật khi đã có phản hồi THẬT (thêm vào CAM_NHAN bên dưới)
   hienCamNhan: false,

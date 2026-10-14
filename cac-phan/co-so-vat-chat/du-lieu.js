@@ -25,7 +25,7 @@ const CO_SO_VAT_CHAT = [
   { anh: "assets/images/co-so/phong-hoc-2.jpg", nhom: "phong-hoc", chuThich: "Phòng học có 2 điều hòa, bảng chống lóa" },
   { anh: "assets/images/co-so/phong-hoc-1.jpg", nhom: "phong-hoc", chuThich: "Phòng học ốp gỗ ấm cúng, đèn LED sáng" },
   { anh: "assets/images/co-so/phong-hoc-4.jpg", nhom: "phong-hoc", chuThich: "Bàn ghế mới, sắp xếp ngay ngắn" },
-  { anh: "assets/images/co-so/cong-truoc.jpg", nhom: "khu-chung", chuThich: "Cổng vào cơ sở – Thôn Nội, Nam Ninh, Ninh Bình" },
+  { anh: "assets/images/co-so/cong-vao.jpg", nhom: "khu-chung", chuThich: "Cổng vào cơ sở – Thôn Nội, Nam Ninh, Ninh Bình" },
   { anh: "assets/images/co-so/san-cho-de-xe.jpg", nhom: "khu-chung", chuThich: "Sân chờ có mái che, bàn ghế cho học sinh và phụ huynh" },
   { anh: "assets/images/co-so/bai-de-xe.jpg", nhom: "khu-chung", chuThich: "Bãi để xe rộng, có lưới che nắng" },
   { anh: "assets/images/co-so/bang-cong-khai.jpg", nhom: "cong-khai", chuThich: "Bảng công khai tuyển sinh, nội quy lớp học, tiêu lệnh PCCC" },
