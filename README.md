@@ -23,4 +23,4 @@ assets/images/      Ảnh
 ```
 
 Sửa số điện thoại, địa chỉ: `chung/thong-tin-chung.js`.
-Sửa giáo viên: `cac-phan/giao-vien/du-lieu.js`. Sửa thời khóa biểu, học phí: `cac-phan/tuyen-sinh/du-lieu.js`.
+Sửa giáo viên: `cac-phan/giao-vien/du-lieu.js`. Sửa thời khóa biểu: `cac-phan/tuyen-sinh/du-lieu.js`.

@@ -214,10 +214,13 @@
       // Dòng học phí, sĩ số dưới đoạn mô tả (lấy từ phần Tuyển sinh)
       const hocPhi = khoaHoc("Học phí");
       const siSo = khoaHoc("Sĩ số");
-      $("#heroNote").innerHTML = [
+      const ghiChu = [
         hocPhi && `Học phí <strong>${esc(hocPhi.replace(/\s*\/\s*/g, "/"))}</strong>`,
         siSo && esc(siSo.charAt(0).toLowerCase() + siSo.slice(1).replace(/\s*\/\s*/g, " mỗi ")),
-      ].filter(Boolean).join(", ") + (SITE.viTriNoiBat ? `. ${esc(SITE.viTriNoiBat)}.` : ".");
+      ].filter(Boolean).join(", ");
+      // viết hoa chữ đầu câu (khi không có học phí, câu bắt đầu bằng "tối đa...")
+      $("#heroNote").innerHTML = (ghiChu ? ghiChu.charAt(0).toUpperCase() + ghiChu.slice(1) + "." : "") +
+        (SITE.viTriNoiBat ? ` ${esc(SITE.viTriNoiBat)}.` : "");
     },
   });
 

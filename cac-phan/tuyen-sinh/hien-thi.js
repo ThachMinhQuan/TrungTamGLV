@@ -24,12 +24,11 @@
           <td data-label="Giáo viên">${gv}</td>
           <td data-label="Lịch học"><span class="schedule__times">${gio}</span></td>
           <td data-label="Sĩ số">Tối đa ${esc(l.siSo)}</td>
-          <td data-label="Học phí">${esc(l.hocPhi)}</td>
           <td data-label="Trạng thái"><span class="status--${esc(l.trangThai)}">${STATUS[l.trangThai] || ""}</span></td>
         </tr>`;
     }).join("");
     return `<div class="schedule"><table>
-        <thead><tr><th>Lớp</th><th>Giáo viên</th><th>Lịch học</th><th>Sĩ số</th><th>Học phí</th><th>Trạng thái</th></tr></thead>
+        <thead><tr><th>Lớp</th><th>Giáo viên</th><th>Lịch học</th><th>Sĩ số</th><th>Trạng thái</th></tr></thead>
         <tbody>${rows}</tbody>
       </table></div>`;
   }
